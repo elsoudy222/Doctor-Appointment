@@ -36,6 +36,10 @@ dependencies:
   easy_localization: ^3.0.5
   # For Splash Screen.
   flutter_native_splash: ^2.3.13
+  # An SVG rendering and widget library for Flutter, which allows painting.
+  flutter_svg: ^2.0.10+1
+  # For adaptive screens and font size.
+  flutter_screenutil: ^5.9.0
 
 
 dev_dependencies:
