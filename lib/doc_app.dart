@@ -1,5 +1,3 @@
-
-
 import 'package:doctor_appointment/core/route/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,7 +15,6 @@ class DocApp extends StatelessWidget {
         title: 'DocDoc App',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(),
-
       ),
     );
   }
