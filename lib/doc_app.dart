@@ -4,9 +4,18 @@ import 'package:doctor_appointment/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class DocApp extends StatelessWidget {
-  AppRouter appRouter;
-   DocApp({super.key, required this.appRouter});
+class DocApp extends StatefulWidget {
+  final AppRouter appRouter;
+
+  const DocApp({
+    super.key,
+    required this.appRouter,
+  });
+  @override
+  State<DocApp> createState() => _DocAppState();
+}
+
+class _DocAppState extends State<DocApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -21,7 +30,7 @@ class DocApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
         ),
         initialRoute: Routes.onBoardingScreen,
-        onGenerateRoute: appRouter.generateRoute,
+        onGenerateRoute: widget.appRouter.generateRoute,
       ),
     );
   }
