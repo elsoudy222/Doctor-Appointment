@@ -37,6 +37,9 @@ class AppTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      validator: (value) {
+        return validator(value);
+      },
       decoration: InputDecoration(
         isDense: true,
         contentPadding: contentPadding ??
@@ -80,9 +83,7 @@ class AppTextFormField extends StatelessWidget {
       cursorColor: cursorColor ?? ColorManager.mainBlue,
       obscureText: isObscureText ?? false,
       style: TextStyles.font14DarkBlueMedium,
-      validator: (value) {
-        return validator(value);
-      },
+
     );
   }
 }
